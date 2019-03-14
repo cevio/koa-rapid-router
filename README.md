@@ -45,7 +45,7 @@ There are pictures and facts:
 | **test:rapid** | `koa + koa-rapid-router` | 2.17 ms | **44828.8** | 6.37 MB |
 | **test:http** | `http + koa-rapid-router` | 1.64 ms | **58911.2** | 5.95 MB |
 
-It is clear from the data that the performance advantages of the service can be established through `http + koa-rapid-router`. And `fastify`, the fastest route, has been completely defeated by `fast-router`.
+It is clear from the data that the performance advantages of the service can be established through `http + koa-rapid-router`. And `fastify`, the fastest route, has been completely defeated by `rapid-router`.
 
 
 
