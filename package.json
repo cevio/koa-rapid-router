@@ -1,13 +1,15 @@
 {
   "name": "koa-rapid-router",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "fastest router for koa",
   "main": "index.js",
   "scripts": {
     "dev": "node test/index.js",
     "test:koa": "autocannon -c 100 -d 40 -p 10 localhost:9009/interface/api/uuid/10000",
-    "test:fast": "autocannon -c 100 -d 40 -p 10 localhost:9008/interface/api/uuid/10000",
-    "test": "npm run test:koa && npm run test:fast"
+    "test:fast": "autocannon -c 100 -d 40 -p 10 localhost:9007/interface/api/uuid/10000",
+    "test:rapid": "autocannon -c 100 -d 40 -p 10 localhost:9008/interface/api/uuid/10000",
+    "test:http": "autocannon -c 100 -d 40 -p 10 localhost:9006/interface/api/uuid/10000",
+    "test": "npm run test:koa && npm run test:fast && npm run test:rapid && npm run test:http"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,7 @@
     "methods": "^1.1.2"
   },
   "devDependencies": {
+    "fastify": "^2.0.1",
     "koa": "^2.7.0",
     "koa-router": "^7.4.0"
   }
