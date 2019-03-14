@@ -32,10 +32,12 @@ Its performance is about 100 times that of [koa-router](https://www.npmjs.com/pa
 
 ![koa-rapid-router](./preview-performance.png)
 
-1. **test:koa** `koa + koa-router` Latency: 245.07 ms, Req/Sec: 394.25, Bytes/Sec: 56 kB
-2. **test:fast** `fastify` Latency: 1.96 ms, Req/Sec: 49324, Bytes/Sec: 7 MB
-3. **test:rapid** `koa + koa-rapid-router` Latency: 2.17 ms, Req/Sec: 44828.8, Bytes/Sec: 6.37 MB
-4. **test:http** `http + koa-rapid-router` Latency: 1.64 ms, Req/Sec: 58911.2, Bytes/Sec: 5.95 MB
+| command | architecture | Latency | Req/Sec | Bytes/Sec |
+| :-----: | :----------: | :-----: | :-----: | :-------: |
+| **test:koa** | `koa + koa-router` | 245.07 ms | **394.25** | 56 kB |
+| **test:fast** | `fastify` | 1.96 ms | **49324** | 7 MB |
+| **test:rapid** | `koa + koa-rapid-router` | 2.17 ms | **44828.8** | 6.37 MB |
+| **test:http** | `http + koa-rapid-router` | 1.64 ms | **58911.2** | 5.95 MB |
 
 It is clear from the data that the performance advantages of the service can be established through `http + koa-rapid-router'. And `fastify', the fastest route, has been completely defeated by `fast-router'.
 
