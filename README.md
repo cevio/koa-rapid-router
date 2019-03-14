@@ -38,11 +38,7 @@ router.get('/uuid/{uid:xyz}', async (ctx) => {
 
 ## Performance
 
-Its performance is 100 times faster then [koa-router](https://www.npmjs.com/package/koa-router), but it's similar to [fastify](https://www.npmjs.com/package/fastify) (if you don't use the KOA infrastructure, use http). 
-
-Test sample: 10,000 static routes are injected into different architectures.
-
-The test commands are the same: `autocannon -c 100 -d 40 -p 10 <url>`
+Its performance is 100 times faster then [koa-router](https://www.npmjs.com/package/koa-router), but it's similar to [fastify](https://www.npmjs.com/package/fastify) (if you don't use the KOA infrastructure, use http). Test sample: 10,000 static routes are injected into different architectures. The test commands are the same: `autocannon -c 100 -d 40 -p 10 <url>`
 
 There are pictures and facts:
 
