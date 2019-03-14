@@ -32,7 +32,7 @@ Its performance is about 100 times that of [koa-router](https://www.npmjs.com/pa
 
 Test sample: 10,000 static routes are injected into different architectures.
 
-The test commands are the same: `autocannon-c 100-d 40-p 10 <url>`
+The test commands are the same: `autocannon-c 100 -d 40 -p 10 <url>`
 
 There are pictures and facts:
 
