@@ -31,3 +31,19 @@ app.use(route.Koa()).listen(3000, err => {
 性能大概是`koa-router`的90倍多。有图有真相：
 
 ![koa-rapid-router](./assets/1.png)
+
+### Test Step
+
+首先打开一个新的命令行
+
+```bash
+npm run dev
+```
+
+然后再新建命令行
+
+```bash
+npm run test
+```
+
+结果一定让人惊讶。
