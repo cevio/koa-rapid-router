@@ -1,7 +1,7 @@
 
 # koa-rapid-router
 
-It is a routing architecture suitable for any service, and we usually use it on KOA. It is currently the fastest routing architecture.
+It is a routing architecture suitable for any service, and we usually use it on KOA, this is currently the fastest routing architecture.
 
 ## Install
 
@@ -26,13 +26,23 @@ app.use(route.Koa()).listen(3000, err => {
 });
 ```
 
+## Add your own types
+
+```javascript
+route.expression('xyz', '[x-z]+');
+// then you can use it like this
+router.get('/uuid/{uid:xyz}', async (ctx) => {
+  ctx.body = ctx.params.uid;
+});
+```
+
 ## Performance
 
 Its performance is about 100 times that of [koa-router](https://www.npmjs.com/package/koa-router), but it's similar to [fastify](https://www.npmjs.com/package/fastify) (if you don't use the KOA infrastructure, use http). 
 
 Test sample: 10,000 static routes are injected into different architectures.
 
-The test commands are the same: `autocannon-c 100 -d 40 -p 10 <url>`
+The test commands are the same: `autocannon -c 100 -d 40 -p 10 <url>`
 
 There are pictures and facts:
 
