@@ -30,7 +30,9 @@ app.use(route.Koa()).listen(3000, err => {
 
 Its performance is about 100 times that of [koa-router](https://www.npmjs.com/package/koa-router), but it's similar to [fastify](https://www.npmjs.com/package/fastify) (if you don't use the KOA infrastructure, use http). 
 
-Test sample: 10,000 static routes are injected into different architectures, and The test commands are the same: `autocannon-c 100-d 40-p 10 <url>`
+Test sample: 10,000 static routes are injected into different architectures.
+
+The test commands are the same: `autocannon-c 100-d 40-p 10 <url>`
 
 There are pictures and facts:
 
