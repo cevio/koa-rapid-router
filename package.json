@@ -32,6 +32,7 @@
     "methods": "^1.1.2"
   },
   "devDependencies": {
+    "autocannon": "^3.2.0",
     "fastify": "^2.0.1",
     "koa": "^2.7.0",
     "koa-router": "^7.4.0"
