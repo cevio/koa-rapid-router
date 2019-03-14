@@ -1,0 +1,36 @@
+{
+  "name": "koa-rapid-router",
+  "version": "1.0.0",
+  "description": "fastest router for koa",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node test/index.js",
+    "test:koa": "autocannon -c 100 -d 40 -p 10 localhost:9009/interface/api/uuid/10000",
+    "test:fast": "autocannon -c 100 -d 40 -p 10 localhost:9008/interface/api/uuid/10000",
+    "test": "npm run test:koa && npm run test:fast"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:cevio/koa-rapid-router.git"
+  },
+  "keywords": [
+    "router",
+    "koa",
+    "performance",
+    "fastest"
+  ],
+  "author": "evio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cevio/koa-rapid-router/issues"
+  },
+  "homepage": "https://github.com/cevio/koa-rapid-router#readme",
+  "dependencies": {
+    "koa-compose": "^4.1.0",
+    "methods": "^1.1.2"
+  },
+  "devDependencies": {
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0"
+  }
+}
