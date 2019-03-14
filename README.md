@@ -30,7 +30,7 @@ app.use(route.Koa()).listen(3000, err => {
 
 Its performance is about 100 times that of [koa-router](https://www.npmjs.com/package/koa-router), but it's similar to [fastify](https://www.npmjs.com/package/fastify) (if you don't use the KOA infrastructure, use http). There are pictures and facts:
 
-![koa-rapid-router](./assets/1.png)
+![koa-rapid-router](./preview-performance.png)
 
 1. **test:koa** `koa + koa-router` Latency: 245.07 ms, Req/Sec: 394.25, Bytes/Sec: 56 kB
 2. **test:fast** `fastify` Latency: 1.96 ms, Req/Sec: 49324, Bytes/Sec: 7 MB
