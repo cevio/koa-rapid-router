@@ -1,6 +1,6 @@
 {
   "name": "koa-rapid-router",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "fastest router for koa",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,10 @@
     "test:http": "autocannon -c 100 -d 40 -p 10 localhost:9006/interface/api/zzz/10000",
     "test": "npm run test:koa && npm run test:fast && npm run test:rapid && npm run test:http"
   },
+  "files": [
+    "lib",
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:cevio/koa-rapid-router.git"

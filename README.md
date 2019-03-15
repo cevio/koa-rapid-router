@@ -9,6 +9,10 @@ It is a routing architecture suitable for any service, and we usually use it on 
 npm i koa-rapid-router
 ```
 
+## Document
+
+[Get started](./docs/README.md)
+
 ## Usage in koa
 
 ```javascript
