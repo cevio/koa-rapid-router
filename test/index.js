@@ -15,19 +15,16 @@ const router = route_1.create('/interface/api');
 const vrouter = route_3.create('/interface/api');
 
 for (let i = 0; i < 10000; i++) {
-  router.get('/uuid/' + (i + 1), async (ctx) => {
-    ctx.body = 'ok';
-  });
-  vrouter.get('/uuid/' + (i + 1), (res) => {
-    res.end('ok');
-  });
-  route_2.get('/interface/api/uuid/' + (i + 1), async (ctx) => {
-    ctx.body = 'ok';
-  });
-  fastify.get('/interface/api/uuid/' + (i + 1), (request, reply) => {
-    reply.send('ok');
-  });
+  router.get('/uuid/' + (i + 1), async (ctx) => ctx.body = 'ok');
+  vrouter.get('/uuid/' + (i + 1), (res) => res.end('ok'));
+  route_2.get('/interface/api/uuid/' + (i + 1), async (ctx) => ctx.body = 'ok');
+  fastify.get('/interface/api/uuid/' + (i + 1), (request, reply) => reply.send('ok'));
 }
+
+router.get('/zzz/{a:number}', async (ctx) => ctx.body = 'ok');
+vrouter.get('/zzz/{a:number}', (res) => res.end('ok'));
+route_2.get('/interface/api/zzz/:a(\\d+)', async (ctx) => ctx.body = 'ok');
+fastify.get('/interface/api/zzz/:a', (request, reply) => reply.send('ok'));
 
 app_1.use(route_1.Koa()).listen(9008, err => {
   if (err) throw err;
