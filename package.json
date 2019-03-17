@@ -1,6 +1,6 @@
 {
   "name": "koa-rapid-router",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "fastest router for koa",
   "main": "index.js",
   "scripts": {
