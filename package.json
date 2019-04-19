@@ -3,6 +3,7 @@
   "version": "1.0.7",
   "description": "fastest router for koa",
   "main": "index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "dev": "node test/index.js",
     "test:middlware": "node test/koa.js",
