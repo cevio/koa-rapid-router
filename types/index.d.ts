@@ -11,7 +11,11 @@ declare module 'koa-rapid-router' {
     public use(...middlewares: Koa.Middleware[]): SubRouter;
   }
 
-  class KoaRapidRouter {
+  namespace KoaRapidRouter {
+    type Router = SubRouter;
+  }
+
+  export default class KoaRapidRouter {
     constructor(options?: IKoaRapidRouterOptions);
     public expression(key: string, value: string): KoaRapidRouter;
     public create(prefix?: string): SubRouter;
@@ -19,9 +23,4 @@ declare module 'koa-rapid-router' {
     public find(method: string, url: string): { middlewares: Koa.Middleware[]; params: object };
   }
 
-  namespace KoaRapidRouter {
-    type Router = SubRouter;
-  }
-
-  export = KoaRapidRouter;
 }
